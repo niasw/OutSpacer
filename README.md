@@ -2,7 +2,7 @@ OutSpacer
 =========
 
 OutSpacer is a 3D game as one of the homeworks in C++ class in 2010, Peking Univ. School of Phys.
-OutSpacer was made by me(niasw), Xuzhen and Jingzhong. The platform is on GLUT(OpenGL).
+OutSpacer was made by me(niasw), Xuzhen(FrankXu) and Zhang Jingzhong(JzZhang). The platform is on GLUT(OpenGL).
 
 Copyright (C) 2010 Sun Smallwhite (niasw) <niasw@pku.edu.cn> et al.
 
