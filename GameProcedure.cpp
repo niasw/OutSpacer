@@ -16,8 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *  Name: GameProcedure.cpp
- *  Author: niasw(ËïËŒ°×) JzZhang(ÕÅŸžÖÐ) FrankXu(ÐìÕð)
- *  Description: Ð¡¿ÎÌâOutspacerÓÎÏ·¹ý³ÌÖÐžšÖúº¯ÊýÊµÏÖ 
+ *  Author: niasw(孙思白) JzZhang(张靖中) FrankXu(徐震)
+ *  Description: 小课题Outspacer游戏过程中辅助函数实现 
  */
 #include "GameProcedure.h"
 int SearchOrder( int cate, void* obj );
@@ -479,7 +479,7 @@ void Save ( char * filename )
 {
      std::ofstream fileout( filename, std::ios::binary );
      fileout.seekp( 0, std::ios::beg );
-     fileout.write( "OS", 2 );                                        //ÎÄŒþÀàÐÍ±êÊ¶ 
+     fileout.write( "OS", 2 );                                        //文件类型标识 
      int size;
      if (gamestate==CASE_GAMEfight)
      {
@@ -496,18 +496,18 @@ void Save ( char * filename )
              + Node<Gas>::num + Node<Explosion>::num - 1;
      }
      fileout.seekp( 0x94, std::ios::beg );
-     fileout.write( (char*)&size, 4 );                                //ÀàžöÊý 
+     fileout.write( (char*)&size, 4 );                                //类个数 
      size = 0x98 + size * 92;
      fileout.seekp( 2, std::ios::beg );
-     fileout.write( (char*)&size, 4 );                                //ÎÄŒþŽóÐ¡ 
-     fileout.write( (char*)&Level, 4 );                               //Œ¶±ð 
+     fileout.write( (char*)&size, 4 );                                //文件大小 
+     fileout.write( (char*)&Level, 4 );                               //级别 
      int tmp = 0x94;
-     fileout.write( (char*)&tmp, 4 );                                 //ÊýŸÝÆðÊŒÎ»ÖÃ
+     fileout.write( (char*)&tmp, 4 );                                 //数据起始位置
      tmp = 0x86;
-     fileout.write( (char*)&tmp, 4 );                                 //ÐÅÏ¢Í·ŽóÐ¡
-     fileout.write( (char*)&gamestate, 2);                            //Ä£Êœ
-     fileout.write( (char*)&MapRadius, 8);                            //µØÍŒ°ëŸ¶
-     //ÐŽmainshipÊýŸÝ 
+     fileout.write( (char*)&tmp, 4 );                                 //信息头大小
+     fileout.write( (char*)&gamestate, 2);                            //模式
+     fileout.write( (char*)&MapRadius, 8);                            //地图半径
+     //写mainship数据 
      fileout.write( (char*)&(mainship->dPx), 8);
      fileout.write( (char*)&(mainship->dPy), 8);
      fileout.write( (char*)&(mainship->dVx), 8);
