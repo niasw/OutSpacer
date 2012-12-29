@@ -16,8 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  *  Name: GameAttributes.h
- *  Author: niasw(ËïËŒ°×) JzZhang(ÕÅŸžÖÐ) FrankXu(ÐìÕð)
- *  Description: Ð¡¿ÎÌâÓÎÏ·²ÎÊýÍ·ÎÄŒþ 
+ *  Author: niasw(孙思白) JzZhang(张靖中) FrankXu(徐震)
+ *  Description: 小课题游戏参数头文件 
  */
 
 #ifndef _PHYCONST_
