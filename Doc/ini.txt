@@ -1,0 +1,12 @@
+文件头：
+0x00: 4f 49 			文件类型标志OI
+0x02: ?? ?? ?? ??		文件大小(B)
+0x06: 00 00 00 00		留白
+0x0a: 10 00 00 00		数据起始位置(B偏移)
+0x0e: 00 00			留白
+数据区：
+0x10: ?? ?? ?? ??		slope_angle (float) //angle of the viewing direction
+0x14: ??			cheat_mode (00 for off, 01 for on) //whether cheating mode is on
+0x15: ??			control_mode (00 for mode1, 01 for mode2, 02 for mode3) //controlling mode
+0x16: ?? ?? ?? ?? ??		key[0xb] = {	'w', 's', 'a', 'd', '[',
+      ?? ?? ?? ?? ??				']', 's', 'd', 'o', 'p'		} //key settings (not include the ending '\0')

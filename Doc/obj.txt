@@ -1,0 +1,14 @@
+1 Star			double*4					32B
+2 BiStar		double*a + int*2				88B
+3 BlackHole		double*4					32B
+4 Planet		double*6					48B
+5 SpaceShip		double*6 + int*2 + double*4			88B
+6 Fort			double*2 + int*2 + pointer + int + pointer	36B
+7 Missile		double*4 + int + pointer			40B
+8 Bullet		double*4					32B
+9 FuelBox		double*4					32B
+a ExplosiveBox		double*4					32B
+b Station		double*3					24B
+
+-1Gas			double*6 + int					52B
+-2Explosion		double*3 + int					28B
