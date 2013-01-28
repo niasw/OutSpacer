@@ -1,0 +1,2 @@
+#define OutSpacer_VERSION_MAJOR @OutSpacer_VERSION_MAJOR@
+#define OutSpacer_VERSION_MINOR @OutSpacer_VERSION_MINOR@
