@@ -20,8 +20,6 @@
  *  Description: 小课题Outspacer主程序 
  */
 
-#include "OutSpacerConfig.h"
-
 #define _SMOOTH_ //the following variables is external (in MenuPaintings.h)
 float now_item = 0; //the current view, tend to the 'to_item'
 int to_item = 1; //the chosen item, lead the 'now_item', to move the menu smoothly
